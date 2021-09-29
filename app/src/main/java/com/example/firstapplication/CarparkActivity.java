@@ -50,7 +50,7 @@ public class CarparkActivity extends AppCompatActivity implements GoogleMap.OnMy
 
 
     static final String API_URL= "http://datamall2.mytransport.sg/ltaodataservice/CarParkAvailabilityv2";
-    static final String API_KEY= "vrJ4e/28RUKoH09HOP85yQ==";
+    static final String API_KEY= BuildConfig.API_KEY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -25,3 +25,15 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+def apikeyPropertiesFile = rootProject.file("secret.properties")
+def apikeyProperties = new Properties()
+apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
+ 
+android {
+
+  defaultConfig {     
+    // should correspond to key/value pairs inside the file   
+    buildConfigField("String", "API_KEY", apikeyProperties['KEY'])
+  }
+}

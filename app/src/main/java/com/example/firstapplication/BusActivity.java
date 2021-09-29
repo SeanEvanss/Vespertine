@@ -27,7 +27,7 @@ public class BusActivity extends AppCompatActivity {
     static final String BUS_ROUTE_API="http://datamall2.mytransport.sg/ltaodataservice/BusRoutes";
     static final String BUS_ARRIVAL_API="http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2";
 
-    static final String API_KEY="vrJ4e/28RUKoH09HOP85yQ==";
+    static final String API_KEY= BuildConfig.API_KEY;
 
     Map<String,String> busStopHashMap= new HashMap<String,String>();
     ArrayList<String[]> BusRouteInfo = new ArrayList<String[]>();
