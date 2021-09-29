@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaxiActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/clear_button"
+        android:alpha="0.75"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:text="Refresh"
+        android:onClick="createAllMarker"
+        android:textColor="@color/Navy" />
+
+    <Button
+        android:id="@+id/taxi_button"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="70dp"
+        android:alpha="0.75"
+        android:text="@string/Taxi_Link"
+        android:onClick="createAllMarker"
+        android:textColor="@color/Navy" />
+
+
+</RelativeLayout>
