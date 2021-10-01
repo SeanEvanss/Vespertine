@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 
+def apikeyPropertiesFile = rootProject.file("secret.properties")
+def apikeyProperties = new Properties()
+apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -9,6 +13,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // should correspond to key/value pairs inside the file
+        buildConfigField('String', 'API_KEY', apikeyProperties['KEY'])
     }
     buildTypes {
         release {

@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
